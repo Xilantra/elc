@@ -7,17 +7,17 @@ var elcApp = angular.module('elcApp', ['ui.router','ui.bootstrap']);
       .state('home', {
         url: '/',
         //controller: 'homeCtrl',
-        templateUrl: '../partials/home.html'
+        templateUrl: '//xilantra.github.io/elc/partials/home.html'
       })
       .state('about', {
         url: '/about',
         //controller: 'aboutCtrl',
-        templateUrl: '../partials/about.html'
+        templateUrl: '//xilantra.github.io/elc/partials/about.html'
       })
      .state('educators', {
         url: '/educators',
         //controller: 'educators',
-        templateUrl: '../partials/educators.html'
+        templateUrl: '//xilantra.github.io/elc/partials/educators.html'
       });
 })
 
