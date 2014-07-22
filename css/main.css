@@ -21,6 +21,7 @@
 /* ==========================================================================
    Custom styles & BootOveride
    ========================================================================== */
+body{padding-top:51px}
 a, button {
     -webkit-transition: all .4s ease-in-out;
        -moz-transition: all .4s ease-in-out;
@@ -33,6 +34,9 @@ a, button {
     border: 2px solid gold;
     border-radius: 0;
 }
+
+.nav, .pagination, .carousel, .panel-title a {cursor: pointer}
+hr {width:90%}
 
 /* Custom dropdown */
 .navbar-default .navbar-nav>li>a:hover,
