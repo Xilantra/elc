@@ -68,9 +68,8 @@ function CalendarCtrl($scope) {
             className: 'gcal-event',           // an option!
             currentTimezone: 'America/Chicago' // an option!
     };
-/*
-    /* event source that contains custom events on the scope  
-    $scope.events = [
+ 
+     $scope.events = [
       {title: 'All Day Event',start: new Date(y, m, 1)},
       {title: 'Long Event',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
       {id: 999,title: 'Repeating Event',start: new Date(y, m, d - 3, 16, 0),allDay: false},
@@ -78,8 +77,7 @@ function CalendarCtrl($scope) {
       {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
       {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
     ];
-    /* event source that calls a function on every view switch  
-    $scope.eventsF = function (start, end, callback) {
+     $scope.eventsF = function (start, end, callback) {
       var s = new Date(start).getTime() / 1000;
       var e = new Date(end).getTime() / 1000;
       var m = new Date(start).getMonth();
@@ -96,20 +94,16 @@ function CalendarCtrl($scope) {
           {type:'party',title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
         ]
     };
-    /* alert on eventClick  
-    $scope.alertOnEventClick = function( event, allDay, jsEvent, view ){
+     $scope.alertOnEventClick = function( event, allDay, jsEvent, view ){
         $scope.alertMessage = (event.title + ' was clicked ');
     };
-    /* alert on Drop  
-     $scope.alertOnDrop = function(event, dayDelta, minuteDelta, allDay, revertFunc, jsEvent, ui, view){
+      $scope.alertOnDrop = function(event, dayDelta, minuteDelta, allDay, revertFunc, jsEvent, ui, view){
        $scope.alertMessage = ('Event Droped to make dayDelta ' + dayDelta);
     };
-    /* alert on Resize  
-    $scope.alertOnResize = function(event, dayDelta, minuteDelta, revertFunc, jsEvent, ui, view ){
+     $scope.alertOnResize = function(event, dayDelta, minuteDelta, revertFunc, jsEvent, ui, view ){
        $scope.alertMessage = ('Event Resized to make dayDelta ' + minuteDelta);
     };
-    /* add and removes an event source of choice  
-    $scope.addRemoveEventSource = function(sources,source) {
+     $scope.addRemoveEventSource = function(sources,source) {
       var canAdd = 0;
       angular.forEach(sources,function(value, key){
         if(sources[key] === source){
@@ -121,8 +115,7 @@ function CalendarCtrl($scope) {
         sources.push(source);
       }
     };
-    /* add custom event 
-    $scope.addEvent = function() {
+     $scope.addEvent = function() {
       $scope.events.push({
         title: 'Open Sesame',
         start: new Date(y, m, 28),
@@ -130,20 +123,16 @@ function CalendarCtrl($scope) {
         className: ['openSesame']
       });
     };
-    /* remove event  
-    $scope.remove = function(index) {
+     $scope.remove = function(index) {
       $scope.events.splice(index,1);
     };
-    /* Change View  
-    $scope.changeView = function(view,calendar) {
+     $scope.changeView = function(view,calendar) {
       calendar.fullCalendar('changeView',view);
     };
-    /* Change View  
-    $scope.renderCalender = function(calendar) {
+     $scope.renderCalender = function(calendar) {
       calendar.fullCalendar('render');
     };
-    /* config object  
-    $scope.uiConfig = {
+     $scope.uiConfig = {
       calendar:{
         height: 450,
         editable: true,
@@ -169,10 +158,8 @@ function CalendarCtrl($scope) {
         $scope.changeTo = 'Hungarian';
       }
     };
-    /* event sources array 
-    $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
+     $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
     $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
-    */
-}
+ }
 //End calendar! Tak tau amenda js panjang2 ni. Edit kot.
 
