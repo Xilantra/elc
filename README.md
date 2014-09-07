@@ -1,9 +1,10 @@
-ELC : Todo
-===
+#ELC : Todo
 
 
+Please note that first load is pretty slow..as for now.
+Aku cadang prerender/prefetch page je nanti. (native/script(default/on hover))
+Lepas tu manage js dengan requireJS. http://requirejs.org/
 
-Please note that first load is usually slow..for now.
 
 -Amek Calendar
 
@@ -32,10 +33,17 @@ Please note that first load is usually slow..for now.
 -Footer dengan map background..rajin?
 
 
+#Kalau sempat/rajin
+Buat theme versi gelap, nightmode
+
 
 #Final
+-Buat welcoming note guna introjs.
+
 -Buang bloated css @ Bootstrap & FontAwesome
 
 -Minify all file
 
 -Check pageSpeed
+
+-Maybe maybe maybe guna http://prerender.io untuk SEO page. (need help)

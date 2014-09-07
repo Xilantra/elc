@@ -1,4 +1,6 @@
-var elcApp = angular.module('elcApp', ['ui.router','ui.bootstrap']);
+//AXA
+
+var elcApp = angular.module('elcApp', ['ui.router', 'ui.calendar', 'ui.bootstrap']);
 
  elcApp.config(function($stateProvider, $urlRouterProvider) {
     
@@ -14,6 +16,11 @@ var elcApp = angular.module('elcApp', ['ui.router','ui.bootstrap']);
         //controller: 'aboutCtrl',
         templateUrl: '../partials/about.html'
       })
+     .state('calendar', {
+        url: '/calendar',
+        //controller: 'calendarCtrl',
+        templateUrl: '../partials/calendar.html'
+      })
      .state('educators', {
         url: '/educators',
         //controller: 'educators',
@@ -23,7 +30,6 @@ var elcApp = angular.module('elcApp', ['ui.router','ui.bootstrap']);
 
 
 //Carousel @ header
- 
  function HeaderCarousel($scope) {
   $scope.myInterval = 5000;
   var slides = $scope.slides = [];
@@ -48,4 +54,35 @@ var elcApp = angular.module('elcApp', ['ui.router','ui.bootstrap']);
 //Dropdown @ navbar
 elcApp.controller('DropdownNav', function($scope) {});
      
- //$scope.navbarCollapsed = true;
+  //$scope.navbarCollapsed = true;
+
+
+var TabsDemoCtrl = function ($scope) {
+  $scope.tabs = [
+    { title:'Dynamic Title 1', content:'Dynamic content 1' },
+    { title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
+  ];
+ 
+};
+
+
+
+//UI-Calendar  http://angular-ui.github.io/ui-calendar/
+function CalendarCtrl($scope) {
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+    
+    //$scope.changeTo = 'Bahasa Malaysia';
+    /* event source that pulls from google.com */
+    $scope.eventSource = {
+            url: "https://www.google.com/calendar/feeds/en.malaysia%23holiday%40group.v.calendar.google.com/public/basic",
+            className: 'ELC-event',
+            cache: true         //aku tak sure benda ni betul2 cache kalendar ke tak, tp kalau letak pun tak kacau apa.
+    };
+
+    $scope.eventSources = [$scope.eventSource];
+    $scope.eventSources2 = [$scope.calEventsExt];
+}
+

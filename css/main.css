@@ -15,12 +15,11 @@
 /* ==========================================================================
    Browse Happy prompt
    ========================================================================== */
-
-.browsehappy {margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0}
-
+.browsehappy {  background: gold; color: #000; padding: 1em}
 /* ==========================================================================
    Custom styles & BootOveride
    ========================================================================== */
+body{padding-top:51px}
 a, button {
     -webkit-transition: all .4s ease-in-out;
        -moz-transition: all .4s ease-in-out;
@@ -34,7 +33,12 @@ a, button {
     border-radius: 0;
 }
 
+.nav, .pagination, .carousel, .panel-title a {cursor: pointer}
+hr {width:90%}
+
 /* Custom dropdown */
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus,
 .dropdown-menu>li>a:hover,
@@ -49,6 +53,15 @@ a, button {
 .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
     background-color: gold;
 }
+}
+
+.navbar-toggle:before {
+    content: "Menu";
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    font-weight: bold
+    color: #666
 }
 
 /* Title @ header */
@@ -130,3 +143,8 @@ border-top: transparent;
 .transparent {background-color: transparent; color: #fff}
 
 #logo-elc {margin-top: -5px;fill: #FFC700}
+
+
+
+.btn-margin {margin: 0 5px 5px 0}
+
